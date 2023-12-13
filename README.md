@@ -16,7 +16,7 @@ Cloud Computing Architectures | EDEM 2024
 **AWS**
 - [Amazon Web Services - Free trial](https://aws.amazon.com/free)
 - [Install AWS CLI](https://aws.amazon.com/cli)
-- 
+  
 ## **01** Cloud Computing Fundamentals
 
 ## **02** Cloud Computing Event-Driven Architecture
