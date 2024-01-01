@@ -34,3 +34,10 @@ To create and manage your virtual machines, you can use Google Cloud CLI or the 
 
 
 6. Leave the rest of the options as default and click Create.
+
+
+Once the instance is created, we have to connect to it. We have several options:
+
+- **SSH from the browser**: This option is only available for Linux instances. It is not available for Windows instances. It is the easiest way to connect to the instance, but it is not available for Windows instances.
+
+- **SSH from the command line**: This option is available for both Linux and Windows instances. It is the most flexible option, but it requires to install the Cloud SDK in your local machine.
