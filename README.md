@@ -21,6 +21,25 @@ Cloud Computing Architectures | EDEM 2024
 
 ## **02** Cloud Computing Event-Driven Architecture
 
+#### Case description
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Whole_Foods_Market_201x_logo.svg" alt="WFM" width="70" height="70"/>
+
+
+As members of the Data team at Whole Foods Market, we have been assigned the task of developing a dashboard to monitor purchases made in three of our grocery stores.
+
+#### Business challenges
+
+- Each grocery store, operating with its own internal processes, will provide transactional data to be stored in our object storage. Therefore, it is required that each grocery store's internal processes have the **necessary permissions** to execute this action.
+
+- Implement an **event-driven architecture**, ensuring that data is immediately stored in the respective tables. The solution should be **optimized** in terms of resource utilization and cost-effectiveness.
+
+- Given the familiarity of our Data team with **Postgres** as a Database, it is the preferred choice for this project.
+
+- The final dashboard should be **exposed as a service** to allow different teams access.
+
+#### Data Architecture
+
 ## **03** Bonus Exercises
 
 ## **04** Bibliography & Additional Resources
