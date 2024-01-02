@@ -23,8 +23,7 @@ Cloud Computing Architectures | EDEM 2024
 
 #### Case description
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Whole_Foods_Market_201x_logo.svg" alt="WFM" width="70" height="70"/>
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Whole_Foods_Market_201x_logo.svg" alt="WFM" width="120" height="120"/>
 
 As members of the Data team at Whole Foods Market, we have been assigned the task of developing a dashboard to monitor purchases made in three of our grocery stores.
 
