@@ -40,6 +40,8 @@ As members of the Data team at Whole Foods Market, we have been assigned the tas
 #### Data Architecture
 <img src="00_DocAux/.images/demo_architecture.png" width="1000"/>
 
-## **03** Bonus Exercises
+## **03** Extra Exercise
+
+As an additional exercise, you are asked to deploy the same architecture, but this time on **Amazon Web Services (AWS)**, specifying the reasoning behind your choice and detailing the steps of its implementation
 
 ## **04** Bibliography & Additional Resources
