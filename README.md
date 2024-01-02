@@ -27,7 +27,7 @@ Cloud Computing Architectures | EDEM 2024
 
 As members of the Data team at Whole Foods Market, we have been assigned the task of developing a dashboard to monitor purchases made in three of our grocery stores.
 
-#### Business challenges
+#### Case Requirements
 
 - Each grocery store, operating with its own internal processes, will provide transactional data to be stored in our object storage. Therefore, it is required that each grocery store's internal processes have the **necessary permissions** to execute this action.
 
