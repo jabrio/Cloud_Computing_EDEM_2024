@@ -38,7 +38,8 @@ As members of the Data team at Whole Foods Market, we have been assigned the tas
 - The final dashboard should be **exposed as a service** to allow different teams access.
 
 #### Data Architecture
-<img src="00_DocAux/.images/demo_architecture.png" width="700"/>
+<img src="00_DocAux/.images/demo_architecture.png" width="1000"/>
+
 ## **03** Bonus Exercises
 
 ## **04** Bibliography & Additional Resources
