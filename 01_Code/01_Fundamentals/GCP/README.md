@@ -66,3 +66,32 @@
    2. Go to the bucket `data-ejercicio-2` and check that the file has been uploaded correctly.
 
 <img src=".images/gcs_6.png" width="500">
+
+## 3. Cloud SQL
+
+### 3.1. Insert from a file using the UI
+   
+1. Create a PostgreSQL instance following the instructions in the [README.md](/00_DocAux/GCP/README.md) file.
+
+2. Go to the SQL page in the GCP console and click on the instance you just created.
+   
+3. Select Database tab on the left menu and click on the `Create database` button.
+   
+<img src=".images/db_1.png">
+<img src=".images/db_2.png">
+
+4. Give the name `initexample` to the database and click on `Create`.
+
+
+5. Create a bucket following the instructions in the [README.md](/00_DocAux/GCP/README.md) file. Give the name `ejericio-3` to the bucket.
+
+6. Upload the files `create-table.sql` and `employee_ej3.csv` from the folder `01_Code/01_Fundamentals/GCP/03_CloudSQL` to the bucket `ejericio-3`.
+
+7. Click on the `Import` button and select the file from the bucket `data-ejercicio-3/create-table.sql`.
+
+<img src=".images/db_3.png">
+
+8. Once the table is created, click on the `Import` button again and select the file from the bucket `data-ejercicio-3/employee_ej3.csv`.
+
+
+

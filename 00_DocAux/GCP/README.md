@@ -69,3 +69,32 @@ Once the instance is created, we have to connect to it. We have several options:
 5. Go inside the bucket and upload the file inside `01_Code/01_Fundamentals/GCP/02_GCS/data/employee_data.csv`.
    
     <img src=".images/gcs_5.png">
+
+
+## 3. Create a PostgreSQL instance in Cloud SQL
+
+1. In the GCP Console, go to the SQL page.
+   
+   <img src=".images/db_1.png">
+
+2. Click on create instance with free credits.
+    
+    <img src=".images/db_2.png">
+
+3. Select PostgreSQL as the database engine.
+   
+    <img src=".images/db_3.png">
+
+4. Select the following options:
+    - Instance ID: `ejercicio-3`
+    - Root password: `EDEM2024-SQL`
+    - Region: europe-west1 (Belgium)
+    - Zone: europe-west1-b
+    - DB version: PostgreSQL 15
+    - Cloud SQL Edition: Enterprise
+    - Default settings of DB: Test Zone
+   
+    <img src=".images/db_4.png">
+    <img src=".images/db_5.png">
+
+5. Click on Create.
