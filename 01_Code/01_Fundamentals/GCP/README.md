@@ -2,7 +2,7 @@
 
 ## 1. Virtual machines
 
-1. Create a VM following the instructions in the [README.md](01_VirtualMachines/README.md) file.
+1. Create a VM following the instructions in the [README.md](/00_DocAux/GCP/README.md) file.
 
 2. Install Docker by following the steps of this link: https://tomroth.com.au/gcp-docker/
    
@@ -36,3 +36,33 @@
    select * from employees_data limit 10;
    ```
 
+
+## 2. Cloud Storage
+
+### 2.1. Read from a bucket
+
+   1. Create a bucket following the instructions in the [README.md](/00_DocAux/GCP/README.md) file.
+
+   2. Upload the content of the folder `01_Code/01_Fundamentals/GCP/02_GCS` to `Cloud Shell`.
+
+   3. Run the command to install the requirements: `pip install -r requirements.txt`
+
+   4. You should get something like this:
+   
+
+| id | first_name | last_name | email | salary |
+| --- | --- | --- | --- | --- |
+| 1 | Alidia | Found |  afound0@who.int | 37061.15 |
+| 2 | Carmelita | Kainz | ckainz1@facebook.com | 56282.20 |
+| 3 | Tam | Pigford | pigford2@miitbeian.gov.cn | 42217.15 |
+| 4 | Malinde | Turbern | mturbern3@springer.com | 42057.87 |
+| 5 | Starla | Laffling |  slaffling4@addtoany.com | 33477.31 |
+
+
+### 2.2. Write to a bucket
+
+   1. Run the command to write the file to the bucket: `python write_to_bucket.py`
+
+   2. Go to the bucket `data-ejercicio-2` and check that the file has been uploaded correctly.
+
+<img src=".images/gcs_6.png" width="500">

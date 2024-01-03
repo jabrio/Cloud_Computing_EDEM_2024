@@ -6,7 +6,7 @@ Compute Engine is a service that provides virtual machines that run on Google in
 
 To create and manage your virtual machines, you can use Google Cloud CLI or the web UI. In this exercise, you will use first the web UI and then the CLI.
 
-### 1.1. Create a Compute Engine instance
+### Create a Compute Engine instance
 
 1. In the GCP Console, go to the VM Instances page.
    
@@ -41,3 +41,31 @@ Once the instance is created, we have to connect to it. We have several options:
 - **SSH from the browser**: This option is only available for Linux instances. It is not available for Windows instances. It is the easiest way to connect to the instance, but it is not available for Windows instances.
 
 - **SSH from the command line**: This option is available for both Linux and Windows instances. It is the most flexible option, but it requires to install the Cloud SDK in your local machine.
+
+
+## 2. Create a Bucket in GCS
+
+1. In the GCP Console, go to the Storage > Browser page.
+   
+   <img src=".images/gcs_1.png">
+
+2. Click Create bucket.
+    
+    <img src=".images/gcs_2.png">
+
+3. In the Create bucket dialog, specify the following attributes:
+    - A unique bucket name.
+    - A default storage class. For this tutorial, choose Standard.
+    - A default location.
+    - A default project. This tutorial uses My First Project.
+    - Click Create.
+
+    <img src=".images/gcs_3.png">
+
+4. Allow for all public access to the bucket.
+   
+    <img src=".images/gcs_4.png">
+
+5. Go inside the bucket and upload the file inside `01_Code/01_Fundamentals/GCP/02_GCS/data/employee_data.csv`.
+   
+    <img src=".images/gcs_5.png">
