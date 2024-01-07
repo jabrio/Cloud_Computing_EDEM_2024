@@ -155,7 +155,6 @@ def run_generator(project_id: str, bucket_name: str):
     Raises:
         Exception: If there is an issue generating the CSV 
         or inserting it into the GCS bucket.
-    Notes: The loop has been removed to only run a batch amount of data on demand.
     """
 
     shopping_list = []

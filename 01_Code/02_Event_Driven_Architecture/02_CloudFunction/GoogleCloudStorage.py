@@ -34,7 +34,6 @@ class GoogleCloudStorage:
 
         """ Read CSVs from a Google Cloud Storage Bucket.
         Params:
-            bucket_name (str): Google Cloud Storage Bucket Name.
             file_name (str): Name of the file we want to read.
         Returns:
             df (str): Pandas DataFrame returned as a blob string format.
