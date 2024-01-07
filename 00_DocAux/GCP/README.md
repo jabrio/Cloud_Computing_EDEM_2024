@@ -45,6 +45,26 @@ Once the instance is created, we have to connect to it. We have several options:
 
 ## 2. Create a Bucket in GCS
 
+### Introduction to GCS
+
+Cloud Storage is a service for storing your objects in Google Cloud. An object is an immutable piece of data consisting of a file of any format. You can think of an object as a file, but it is not limited to just files. An object consists of the following:
+
+- The object itself
+- Metadata
+- A unique identifier
+- A bucket that contains the object
+- A name that you assign to the object
+- A set of access control permissions
+- A set of object lifecycle management rules
+
+There are different types of storage depending on how fast you want to access the data and how much you want to pay for it. The most common types are:
+
+- **Standard**: This is the default storage class. It is designed for frequently accessed data. It is the most expensive option.
+- **Nearline**: This storage class is designed for data that is accessed less than once a month. It is cheaper than the standard storage class, but it has a retrieval fee.
+- **Coldline**: This storage class is designed for data that is accessed less than once a year. It is cheaper than the nearline storage class, but it has a retrieval fee.
+  
+
+
 1. In the GCP Console, go to the Storage > Browser page.
    
    <img src=".images/gcs_1.png">
