@@ -167,7 +167,7 @@ def run_generator(project_id: str, bucket_name: str):
         
         for _ in range(random.randint(5, 15)):
         
-            # Simulate data dumps every X minutes that a Grocery Store might perform
+            # Simulate data dumps that a Grocery Store might perform
             simulated_purchase = generateMockData()
 
             time.sleep(1)
