@@ -112,22 +112,33 @@ gcloud compute instances create <YOUR_INSTANCE_NAME> \
 5. Go to the [Cloud Function](https://console.cloud.google.com/functions/) console and create a function with the following specifications:
 
 - Environment: 2nd gen.
+
 - Region: <YOUR_REGION_ID>
-- Trigger Type: Cloud Storage
-- Event Type: google.cloud.storage.object.v1.finalized
+
+- Trigger Type: **Cloud Storage**.
+
+- Event Type: **google.cloud.storage.object.v1.finalized**.
+
 - Bucket: <YOUR_BUCKET_NAME>
+
 - In the *Runtime* tab, Add Runtime Variables:
     - PG_INSTANCE_URL: <YOUR_INSTANCE_CONNECTION_NAME> 
     - PG_DB: <YOUR_DATABASE_NAME>
     - PROJECT_ID: <YOUR_PROJECT_ID>
+
 - In the *Security and Image repo* tab,Add secrets as environment variables pointing to the previously created secrets.
     - DB_USER: <YOUR_DATABASE_USER_SECRET>
     - DB_PASSWORD: <YOUR_DATABASE_PASSWORD_SECRET>
+
 - Grant permissions to the default service account for the requested resources.
 - Click on Next.
-- Select **Python 3.10** as Runtime
+
+- Select **Python 3.10** as Runtime.
+
 - Upload the Cloud Function Source Code in zip format or add them one by one from the console. [Source Code](01_Code/02_Event_Driven_Architecture/02_CloudFunction).
+
 - Enter *store_data_into_cloud_sql* as the entry_point for the function.
+
 - After deploying the Cloud Function, navigate to the Cloud Run service that is generated linked to it. Click on **Edit and deploy new revision**, scroll down to the **Cloud SQL connections section**, add our previously created Cloud SQL instance, and click on deploy.
 
 6. Go back to the Cloud Shell and navigate to the [Cloud Run](01_Code/02_Event_Driven_Architecture/04_CloudRun) folder. Now, we are going to deploy a Cloud Run service with the Docker image of Grafana.
