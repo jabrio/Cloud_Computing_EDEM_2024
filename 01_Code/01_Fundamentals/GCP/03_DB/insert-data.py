@@ -1,10 +1,13 @@
 import os
+import csv
+import logging
 
 from google.cloud.sql.connector import Connector, IPTypes
 import pg8000
 
 import sqlalchemy
 from sqlalchemy import text
+
 
 
 from dotenv import load_dotenv
@@ -43,6 +46,7 @@ def connect_with_connector() -> sqlalchemy.engine.base.Engine:
             ip_type=ip_type,
         )
         return conn
+    
 
     # The Cloud SQL Python Connector can be used with SQLAlchemy
     # using the 'creator' argument to 'create_engine'
@@ -54,17 +58,40 @@ def connect_with_connector() -> sqlalchemy.engine.base.Engine:
     return pool
 
 
+def insert_data(cursor, row):
+    """
+    Insert a single row into the database.
+    """
+    insert_query = """
+    INSERT INTO employee (id, first_name, last_name, email, salary) VALUES (%s, %s, %s, %s, %s)
+    """
+    cursor.execute(insert_query, row)
+    logging.info("Inserting data row\n")
+
 if __name__ == "__main__":
+        # Set Logs
+    logging.getLogger().setLevel(logging.INFO)
     pool = connect_with_connector()
     with pool.connect() as conn:
-        # Get the raw DB-API connection
         raw_conn = conn.connection.driver_connection
         cursor = raw_conn.cursor()
 
         with open('./data/employees_ej3_python.csv', 'r') as f:
-            # Use cursor.copy_from to load data from the file
-            cursor.copy_from(f, 'employee', sep=',', null='')  # Adjust the parameters as necessary
+            csv_reader = csv.reader(f)
+            next(csv_reader)  # Skip header row, if your CSV has one
+            for row in csv_reader:
+                # Convert id and salary to appropriate types
+                row[0] = int(row[0]) if row[0] else None  # Convert id to int, handle empty values
+                row[4] = float(row[4]) if row[4] else None  # Convert salary to float, handle empty values
+                insert_data(cursor, row)
             raw_conn.commit()
             cursor.close()
+        
+        logging.info("Data insertion finished")
+
+
+
+
+
 
 

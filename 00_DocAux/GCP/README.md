@@ -43,6 +43,8 @@ Once the instance is created, we have to connect to it. We have several options:
 - **SSH from the command line**: This option is available for both Linux and Windows instances. It is the most flexible option, but it requires to install the Cloud SDK in your local machine.
 
 
+<br>
+
 ## 2. Create a Bucket in GCS
 
 ### Introduction to GCS
@@ -91,7 +93,16 @@ There are different types of storage depending on how fast you want to access th
     <img src=".images/gcs_5.png">
 
 
+<br>
+
+
 ## 3. Create a PostgreSQL instance in Cloud SQL
+
+### Introduction to Cloud SQL
+
+Cloud SQL is a fully managed database service that makes it easy to set up, maintain, manage, and administer your relational PostgreSQL, MySQL, and SQL Server databases in the cloud. Cloud SQL offers high performance, scalability, and convenience. Hosted on Google Cloud, it is a fully managed and highly available database service. 
+
+### How to configure a Postgres Instance
 
 1. In the GCP Console, go to the SQL page.
    
@@ -118,3 +129,35 @@ There are different types of storage depending on how fast you want to access th
     <img src=".images/db_5.png">
 
 5. Click on Create.
+
+
+<br>
+
+
+## 4. Create an application in Cloud Run
+
+### Introduction to Cloud Run
+
+Cloud Run is a managed compute platform that enables you to run stateless containers that are invocable via HTTP requests. Cloud Run is serverless: it abstracts away all infrastructure management, so you can focus on what matters most — building great applications. It is built from Knative, letting you choose to run your containers either fully managed with Cloud Run, or in your Google Kubernetes Engine cluster with Cloud Run for Anthos.
+
+
+### How to configure a Cloud Run application
+
+1. In the GCP Console, go to the Cloud Run page.
+   
+   <img src=".images/cr_1.png">
+
+2. Click on create service.
+    
+    <img src=".images/cr_2.png">
+
+3. Once the docker image in in the container register, select the options of the following image:
+   
+    <img src=".images/cr_3.png">
+    <img src=".images/cr_4.png">
+
+4. Once the service is created, click on the service and then on the URL to see the application running.
+   
+    <img src=".images/cr_5.png">
+
+

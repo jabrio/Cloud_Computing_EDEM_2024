@@ -36,6 +36,7 @@
    select * from employees_data limit 10;
    ```
 
+<br>
 
 ## 2. Cloud Storage
 
@@ -67,9 +68,9 @@
 
 <img src=".images/gcs_6.png" width="500">
 
-## 3. Cloud SQL
+<br>
 
-### 3.1. Insert from a file using the UI
+## 3. Cloud SQL
    
 1. Create a PostgreSQL instance following the instructions in the [README.md](/00_DocAux/GCP/README.md) file.
 
@@ -93,5 +94,91 @@
 
 8. Once the table is created, click on the `Import` button again and select the file from the bucket `data-ejercicio-3/employee_ej3.csv`.
 
+
+9. Once the file is imported, you can check that the data has been inserted correctly by running the python script called `check-data.py` from the folder `01_Code/01_Fundamentals/GCP/03_CloudSQL`.
+
+You should get something like this:
+
+```txt
+(1, 'Jody', 'Pollok', 'jpollok0@altervista.org', Decimal('90327.98'))
+(2, 'Waring', 'Alen', 'walen1@youku.com', Decimal('81314.22'))
+(3, 'Ev', 'Dobrowolny', 'edobrowolny2@usnews.com', Decimal('53530.16'))
+(4, 'Hulda', 'Bloore', 'hbloore3@weather.com', Decimal('26500.46'))
+(5, 'Pasquale', 'Mouland', 'pmouland4@elpais.com', Decimal('31010.02'))
+(6, 'Claus', 'Dudderidge', 'cdudderidge5@oakley.com', Decimal('99368.53'))
+(7, 'Lamond', 'Wagenen', 'lwagenen6@statcounter.com', Decimal('10800.08'))
+(8, 'Jeanelle', 'Rumney', 'jrumney7@weebly.com', Decimal('63055.47'))
+(9, 'Ddene', 'Fielden', 'dfielden8@who.int', Decimal('89232.40'))
+(10, 'Cathryn', 'Dowdell', 'cdowdell9@pinterest.com', Decimal('82845.69'))
+```
+
+
+10. Furthermore, you can also insert new data from a different csv by running the file `insert-data.py` from the folder `01_Code/01_Fundamentals/GCP/03_CloudSQL`. This will insert the data from the file `employee_ej3_python.csv` into the table `employees_data`.
+
+
+<br>
+
+## 4. Cloud Run
+
+1. First, we will run the Flask API code locally to check what we want to achieve. To do so, go to the folder `01_Code/01_Fundamentals/GCP/04_CloudRun` and run the following command: `python app.py`. This will start a local server in your machine.
+
+2. In a browser of your choice, go to the following url: `http://localhost:5000/employees`. You should get something like this:
+
+```json
+[
+  {
+    "email": "geoffrey22@example.org",
+    "first_name": "Teresa",
+    "id": 808,
+    "last_name": "Torres",
+    "salary": 37525.01
+  },
+  {
+    "email": "garciajulie@example.com",
+    "first_name": "Crystal",
+    "id": 590,
+    "last_name": "Hunter",
+    "salary": 39075.47
+  },
+
+  --- More data ---
+
+    {
+    "email": "washingtondebra@example.net",
+    "first_name": "Charles",
+    "id": 346,
+    "last_name": "Sherman",
+    "salary": 77096.99
+  },
+  {
+    "email": "hcolon@example.net",
+    "first_name": "Margaret",
+    "id": 429,
+    "last_name": "Davis",
+    "salary": 58775.39
+  }
+]
+
+```
+
+3. Now, we can create the docker image locally and run the container in our machine to check that everything is working properly. To do so, run the following commands:
+
+```bash
+docker build -t my-python-api .
+docker run -p 5000:5000 my-python-api
+```
+4. We can also post data to the API by running the following script:
+
+```bash
+python post_employees.py
+```
+
+5. Now, we will build the image directly in the GCP Container Registry. To do so, upload the folder `01_Code/01_Fundamentals/GCP/04_CloudRun` to the `Cloud Shell` and run the following command inside that folder:
+
+```bash
+gcloud builds submit --tag gcr.io/<project-id>/my-python-api
+```
+
+6. Once the image is built, we can deploy it to Cloud Run. To do so, we follow the steps explained in the [README.md](/00_DocAux/GCP/README.md) file.
 
 
