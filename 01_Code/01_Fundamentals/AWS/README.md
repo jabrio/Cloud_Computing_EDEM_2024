@@ -51,7 +51,6 @@
    - User: initexample
    - Password: initexample
    - Database: initexample
-    <img src=".images/vm_2.png" width="500">
 
 9. Once everything is set up, you can try to run the following query to check that everything is working properly:
    ```sql
