@@ -2,21 +2,11 @@
     "sqltools.connections": [
         {
             "previewLimit": 50,
-            "server": "localhost",
+            "server": "ec2-13-49-67-131.eu-north-1.compute.amazonaws.com",
             "port": 5432,
             "askForPassword": true,
             "driver": "PostgreSQL",
-            "name": "edem_intro_cloud",
-            "database": "initexample",
-            "username": "initexample"
-        },
-        {
-            "previewLimit": 50,
-            "server": "34.175.87.216",
-            "port": 5432,
-            "askForPassword": true,
-            "driver": "PostgreSQL",
-            "name": "edem_vm",
+            "name": "aws-ec2",
             "database": "initexample",
             "username": "initexample"
         }
