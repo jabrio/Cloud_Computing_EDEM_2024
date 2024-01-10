@@ -48,7 +48,9 @@
 
    3. Run the command to install the requirements: `pip install -r requirements.txt`
 
-   4. You should get something like this:
+   4. Run the command to read the file from the bucket: `python read_from_bucket.py`
+
+   5. You should get something like this:
    
 
 | id | first_name | last_name | email | salary |
