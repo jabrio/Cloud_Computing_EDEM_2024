@@ -79,3 +79,27 @@
 
 <br>
 
+
+## 3. RDS Database PostgreSQL instance
+
+1. Create a PostgreSQL instance following the instructions in the [README.md](/00_DocAux/AWS/README.md) file.
+
+2. Run the script `insert-data.py` to insert the data from the file `employee_data.csv` into the database.
+
+3. We will then use DBeaver to connect to the database. To do so, follow these steps:
+    3.1 Go to the RDS section in the AWS console and click on `Databases`.
+    3.2 Once installed, open DBeaver and click on `New connection`.
+    3.3 Select `PostgreSQL` as the database and click on `Next`.
+    3.4 Fill in the following parameters:
+    - Host: \<DB endpoint\>
+    - Port: 5432
+    - Database: postgres
+    - User name: postgres
+    - Password: EDEM2024
+    3.5 Click on `Test connection` to check that everything is working properly.
+    3.6 Click on `Finish` to save the connection.
+    3.7 Click on `Connect` to connect to the database.
+    3.8 Once connected, you can run the following query to check that everything is working properly:
+    ```sql
+    select * from <schema>.employees_data limit 10;
+    ```

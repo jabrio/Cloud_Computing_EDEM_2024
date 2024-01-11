@@ -48,3 +48,24 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service that offe
    <img src=".images/s3_3.png">
 
 3. Leave the rest of the options as default and click on `Create bucket`.
+
+
+## 3. RDS Database PostgreSQL instance
+
+### Introduction to RDS
+
+Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups. It frees you to focus on your applications so you can give them the fast performance, high availability, security and compatibility they need.
+
+### Create a PostgreSQL instance
+
+1. In the AWS Console, go to the RDS page.
+
+2. Click on `Create database`.
+<img src=".images/rds_1.png">
+
+3. Select easy create and apply the following configuration:
+
+<img src=".images/rds_2.png">
+<img src=".images/rds_3.png">
+
+4. Click on `Create database`.
