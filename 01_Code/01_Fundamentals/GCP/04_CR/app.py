@@ -1,3 +1,13 @@
+""" 
+Script: Flask API code to be deployed using Cloud Run
+
+Description: This script gives an example of how to create a simple API using Flask that can then be deployed into Cloud Run
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 from flask import Flask, jsonify, request
 from faker import Faker
 import random

@@ -1,3 +1,13 @@
+""" 
+Script: Post content in an API deployed in Cloud Run
+
+Description: This script gives an example of how make post request to an API deployed in Cloud Run
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 from faker import Faker
 import random
 import requests

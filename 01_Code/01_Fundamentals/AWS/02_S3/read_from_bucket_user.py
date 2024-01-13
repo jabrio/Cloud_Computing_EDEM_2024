@@ -1,3 +1,13 @@
+""" 
+Script: Get files from a S3 AWS Bucket
+
+Description: This script gives an example of how to extract files from a Bucket in AWS and print the content in a Pandas DF using User created Credentials
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import pandas as pd
 import boto3
 from io import StringIO

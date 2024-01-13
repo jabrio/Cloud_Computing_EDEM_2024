@@ -1,3 +1,13 @@
+""" 
+Script: Write files to a GCP Bucket from a local file
+
+Description: This script gives an example of how to store a CSV file into a GCP bucket from a local file and then it prints its content into a Pandas DF
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import pandas as pd
 from google.cloud import storage
 

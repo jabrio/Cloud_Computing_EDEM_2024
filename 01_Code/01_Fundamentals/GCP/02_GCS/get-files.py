@@ -1,3 +1,13 @@
+""" 
+Script: Get files from a GCP Bucket
+
+Description: This script gives an example of how to extract files from a Bucket in GCP and print the content in a Pandas DF
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import pandas as pd
 from google.cloud import storage
 
