@@ -1,3 +1,13 @@
+""" 
+Script: Insert rows in a table stored in a Database in Cloud SQL
+
+Description: This script gives an example of how to load the content of a CSV file into rows of a database inside a Postgres instance in Cloud SQL
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import os
 import csv
 import logging

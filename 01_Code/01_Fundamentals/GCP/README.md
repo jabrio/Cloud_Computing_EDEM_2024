@@ -7,21 +7,19 @@
 2. Install Docker by following the steps of this link: https://tomroth.com.au/gcp-docker/
    
 3. Once docker is installed, upload the folder `01_Code/01_Fundamentals/GCP/01_VM` to the VM.
-   <img src=".images/vm_1.png" width="500">
 
 4. Run `docker compose up -d` from the `01_Code/01_Fundamentals/GCP/01_VM` folder. This will create a postgres database, run the init.sql script creating a table and inserting some data from a csv file.
    
 5. Once the database is created, you can try to access the container by running `docker exec -it <container_id> psql -U initexample` and then `select * from employees_data limit 10;` This will show you 10 files of the table created.
    
 6. However, if want to access it from your local machine, you need to create a firewall rule to allow the connection. To do so, go to the VPC network section in the GCP console and create a new firewall rule. To do so, follow these steps:
-    6.1 Go to the VPC network section in the GCP console and create a new firewall rule.
-    <img src=".images/vm_3.png" width="500">
-    <img src=".images/vm_4.png" width="500">
-    6.2 Create a new firewall rule with the following parameters:
-    <img src=".images/vm_5.png" width="500">
-    <img src=".images/vm_6.png" width="500">
+    6.1 Go to the VPC network section in the GCP console and create a new firewall rule with the following parameters:
+    - Name: allow-postgres
+    - Target labels: ejericio1
+    - Source IP ranges: 0.0.0.0/0
+    - Protocols and ports: tcp:5432
 
-7. Try to query the database from the VM. You can install the following vscode extension to do so https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-mysql
+7. Try to query the database from the VM. You can use DBeaver to do so.
 
 8. From there, you can connect to the database using the following credentials:
    - Host: \<VM external IP\>
@@ -29,7 +27,6 @@
    - User: initexample
    - Password: initexample
    - Database: initexample
-    <img src=".images/vm_2.png" width="500">
 
 9. Once everything is set up, you can try to run the following query to check that everything is working properly:
    ```sql
@@ -68,7 +65,6 @@
 
    2. Go to the bucket `data-ejercicio-2` and check that the file has been uploaded correctly.
 
-<img src=".images/gcs_6.png" width="500">
 
 <br>
 
@@ -79,9 +75,6 @@
 2. Go to the SQL page in the GCP console and click on the instance you just created.
    
 3. Select Database tab on the left menu and click on the `Create database` button.
-   
-<img src=".images/db_1.png">
-<img src=".images/db_2.png">
 
 4. Give the name `initexample` to the database and click on `Create`.
 
@@ -92,7 +85,6 @@
 
 7. Click on the `Import` button and select the file from the bucket `data-ejercicio-3/create-table.sql`.
 
-<img src=".images/db_3.png">
 
 8. Once the table is created, click on the `Import` button again and select the file from the bucket `data-ejercicio-3/employee_ej3.csv`.
 
@@ -120,7 +112,7 @@ You should get something like this:
 
 <br>
 
-## 4. Cloud Run
+## ** ADDITIONAL EXCERCISE ** 4. API with Cloud Run
 
 1. First, we will run the Flask API code locally to check what we want to achieve. To do so, go to the folder `01_Code/01_Fundamentals/GCP/04_CloudRun` and run the following command: `python app.py`. This will start a local server in your machine.
 

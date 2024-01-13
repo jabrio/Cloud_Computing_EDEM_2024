@@ -1,3 +1,13 @@
+""" 
+Script: Run queries in a Postgres instance of AWS RDS service
+
+Description: This script gives an example of how run SQL queries into a Postgres instance deployed in AWS RDS 
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import os
 import csv
 import logging

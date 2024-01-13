@@ -1,3 +1,13 @@
+""" 
+Script: Run query in a Postgres instance in Cloud SQL
+
+Description: This script gives an example of how run a SQL query in a Postgres instance deployed in Cloud SQL
+
+EDEM. Master Data Analytics 2023/2024
+Weekday Group Professor: Miguel Moratilla
+Weekend Group Professor: Javi Briones
+"""
+
 import os
 
 from google.cloud.sql.connector import Connector, IPTypes
