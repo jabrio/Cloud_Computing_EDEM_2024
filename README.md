@@ -19,7 +19,7 @@ Cloud Computing Architectures | EDEM 2024
   
 ## **01** Cloud Computing Fundamentals
 
-### Google Cloud Platform (GCP) components set-up. [Link](01_Code/00_DocAux/GCP/README.md)
+### Google Cloud Platform (GCP) components set-up. [Link](00_DocAux/GCP/README.md)
 
 <br>
 
