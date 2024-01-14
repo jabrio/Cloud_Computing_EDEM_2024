@@ -19,6 +19,32 @@ Cloud Computing Architectures | EDEM 2024
   
 ## **01** Cloud Computing Fundamentals
 
+### Google Cloud Platform (GCP) components set-up. [Link](01_Code/00_DocAux/GCP/README.md)
+
+<br>
+
+### Google Cloud Platform (GCP) excercises. [Link](01_Code/01_Fundamentals/GCP/README.md)
+
+#### Exercise 01: VM. [Link](01_Code/01_Fundamentals/GCP/01_VM)
+#### Exercise 02: Cloud Storage. [Link](01_Code/01_Fundamentals/GCP/02_GCS)
+#### Exercise 03: Cloud SQL. [Link](01_Code/01_Fundamentals/GCP/03_DB)
+#### \*\* Extra \*\* Exercise 04: Cloud Run. [Link](01_Code/01_Fundamentals/GCP/04_CR')
+
+<br>
+
+### Amazon Web Services (AWS) components set-up. [Link](01_Code/00_DocAux/AWS/README.md)
+
+<br>
+
+### Amazon Web Services (AWS) excercises. [Link](01_Code/01_Fundamentals/AWS/README.md)
+
+#### Exercise 01: EC2. [Link](01_Code/01_Fundamentals/AWS/01_VM)
+#### Exercise 02: S3. [Link](01_Code/01_Fundamentals/AWS/02_S3)
+#### Exercise 03: RDS. [Link](01_Code/01_Fundamentals/AWS/03_RDS)
+
+
+
+
 ## **02** Cloud Computing Event-Driven Architecture
 
 #### Case description
