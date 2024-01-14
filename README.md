@@ -236,7 +236,7 @@ gcloud storage buckets delete <YOUR_GCS_BUCKET_NAME>
 
 ## **03** Extra Exercise (Homework Assignment)
 
-As an additional exercise, you are asked to deploy the same architecture, but this time on **Amazon Web Services (AWS)**, specifying the reasoning behind your choice and detailing the steps of its implementation
+As the management team spends a significant amount of time traveling, they need to receive the most important KPIs via email each time a grocery store updates its data. To achieve this, it is requested that a **Cloud Function be triggered every time our tables are updated**, allowing the sending of an email with detailed information.
 
 ## **04** Bibliography & Additional Resources (GCP)
 
