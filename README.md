@@ -17,7 +17,7 @@ Cloud Computing Architectures | EDEM 2024
 - [Amazon Web Services - Free trial](https://aws.amazon.com/free)
 - [Install AWS CLI](https://aws.amazon.com/cli)
   
-## **01** Cloud Computing Fundamentals
+## **01** Cloud Computing: Fundamentals
 
 ### Google Cloud Platform (GCP) components set-up. [Link](00_DocAux/GCP/README.md)
 
@@ -45,7 +45,7 @@ Cloud Computing Architectures | EDEM 2024
 
 
 
-## **02** Cloud Computing Event-Driven Architecture
+## **02** Cloud Computing: Event-Driven Architecture
 
 #### Case description
 
