@@ -262,7 +262,7 @@ gcloud storage buckets delete <YOUR_GCS_BUCKET_NAME>
 
 ## **03** Extra Exercise (Homework Assignment)
 
-As the management team spends a significant amount of time traveling, they need to receive the most important KPIs via email each time a grocery store updates its data. To achieve this, it is requested that a **Cloud Function be triggered every time our tables are updated**, allowing the sending of an email with detailed information.
+As an exercise, you are required to reproduce the **whole architecture**, specifying each step of the solution and providing screenshots for each. Additionally, you should create a Grafana dashboard that explains the variables you want to highlight.
 
 ## **04** Bibliography & Additional Resources (GCP)
 
