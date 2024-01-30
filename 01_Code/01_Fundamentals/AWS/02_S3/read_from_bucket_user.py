@@ -29,7 +29,7 @@ def read_s3(bucket_name, object_name, aws_access_key_id, aws_secret_access_key):
     print(df.head())
 
 if __name__ == "__main__":
-    aws_access_key_id = 'AKIAYS2NWWMVVZ6BR5HP'
-    aws_secret_access_key = 'XJeWixGVB32SHCj0fRQ2uePgKI+s4yKSROgnSRnG'
+    aws_access_key_id = 'YOUR_AWS_ACCESS_KEY_ID'
+    aws_secret_access_key = 'YOUR_AWS_SECRET_ACCESS_KEY'
     read_s3("ejercicio-1-edem-2024", "02_S3/data/employee_data.csv",
             aws_access_key_id, aws_secret_access_key)
