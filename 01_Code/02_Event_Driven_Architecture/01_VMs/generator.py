@@ -84,6 +84,8 @@ class GoogleCloudStorage:
         self.client.close()
         logging.info("Google Cloud Storage Client closed.")
 
+
+
 fake = Faker()
             
 """ Helpful methods """
