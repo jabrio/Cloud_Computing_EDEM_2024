@@ -29,4 +29,4 @@ def read_s3(bucket_name, object_name):
     print(df.head())
 
 if __name__ == "__main__":
-    read_s3("ejercicio-2", "02_S3/data/employee_data.csv")
+    read_s3("ejercicio-1-edem-2024", "02_S3/data/employee_data.csv")

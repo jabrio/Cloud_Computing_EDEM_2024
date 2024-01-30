@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
     local_file_name = "./employee_data_write.csv"
     bucket_name = "ejercicio-2-write"
-    object_name = "employee_data_write.csv"
+    object_name = "employee_data2_write.csv"
     region = 'eu-north-1'  # Specify your region here
 
     if not bucket_exists(s3_client, bucket_name):
@@ -50,3 +50,4 @@ if __name__ == "__main__":
 
     pd_df = read_local_csv(local_file_name)
     write_to_s3(pd_df, bucket_name, object_name, region)
+    pd_df.head()
