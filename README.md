@@ -186,7 +186,7 @@ docker tag grafana-cloud-run <REGION_ID>-docker.pkg.dev/<PROJECT_ID>/<ARTIFACT_R
 - Push the image to Artifact Registry.
 
 ```
-docker push grafana-cloud-run <REGION_ID>-docker.pkg.dev/<PROJECT_ID>/<ARTIFACT_REPOSITORY>/grafana-cloud-run:<TAG>
+docker push <REGION_ID>-docker.pkg.dev/<PROJECT_ID>/<ARTIFACT_REPOSITORY>/grafana-cloud-run:<TAG>
 ```
 
 7. Go to the [Cloud Run Console](https://console.cloud.google.com/run) and click on **Create Service**:
